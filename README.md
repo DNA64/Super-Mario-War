@@ -3,11 +3,32 @@
 ### Clone Repository
 
 ```
-git clone https://github.com/HerbFargus/Super-Mario-War.git
+git clone https://github.com/DNA64/Super-Mario-War.git
 ```
+
+### Install Dependencies
+Some builds are missing the required libraries listed below which will cause your build to fail and produces errors.
+
+* libsdl1.2-dev
+* libsdl-mixer1.2-dev 
+* libsdl-image1.2-dev
+
+You can check to see if you have the required denpendencies above before attempting to install them.
+You can do so by typing the following in a command window.
+
+```
+dpkg-query -l libsdl*
+```
+
+If you're missing the above packages install them now before continuing.
+
+```
+sudo apt-get install -f libsdl1.2-dev libsdl-mixer1.2-dev libsdl-image1.2-dev
+```
+
 ### Configure make and install
 ```
-cd smw
+cd Super-Mario-War
 chmod +x configure
 ./configure
 make
@@ -15,9 +36,9 @@ sudo make install
 ```
 ### Remove uneeded files
 ```
-sudo rm -r smw
+sudo rm -r Super-Mario-War
 ```
-to run type `smw` in the terminal
+to run goto /opt/retropie/ports/smw and type `./smw` in the terminal
 
 ![](gfx/docs/splash.png)
 
